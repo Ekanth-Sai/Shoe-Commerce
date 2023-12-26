@@ -2,9 +2,7 @@
 
 $con=mysqli_connect('localhost', 'root', '', 'shoecommerce');
 
-if($con){
-    echo "Connection succesful";
-}else{
+if(!$con){
     die(mysqli_error($con));
 }
 
