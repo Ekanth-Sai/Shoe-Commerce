@@ -1,3 +1,21 @@
 CREATE TABLE `shoecommerce`.`categories` (`category_id` INT NOT NULL AUTO_INCREMENT , `category_title` VARCHAR(100) NOT NULL ) ENGINE = InnoDB;
 
 CREATE TABLE `shoecommerce`.`brands` (`brand_id` INT NOT NULL AUTO_INCREMENT , `brand_title` VARCHAR(100) NOT NULL , PRIMARY KEY (`brand_id`)) ENGINE = InnoDB;
+
+CREATE TABLE `shoecommerce` (
+  `product_id` INT NOT NULL AUTO_INCREMENT,
+  `product_title` VARCHAR(100) NOT NULL,
+  `product_description` VARCHAR(300) NOT NULL,
+  `product_keywords` VARCHAR(200) NOT NULL,
+  `category_id` INT NOT NULL,
+  `brand_id` INT NOT NULL,
+  `product_image1` VARCHAR(255) NOT NULL,
+  `product_image2` VARCHAR(255) NOT NULL,
+  `product_image3` VARCHAR(255) NOT NULL,
+  `product_price` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`product_id`)
+) ENGINE = InnoDB;
+
+ALTER TABLE shoecommerce RENAME TO products;
+
+ALTER TABLE `products` ADD `date` TIMESTAMP NOT NULL AFTER `product_price`, ADD `status` VARCHAR(100) NOT NULL AFTER `date`;
