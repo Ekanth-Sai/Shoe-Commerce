@@ -98,7 +98,7 @@ include('../functions/common_function.php');
               <!-- Product 1 -->
               <!-- fetching products -->
               <?php
-              getproducts();
+              get_all_products();
               get_unique_categories();
               get_unique_brands();
               ?>
@@ -129,9 +129,11 @@ include('../functions/common_function.php');
         </div>
 
         <!-- last child -->
-        <?php
-        include('../includes/footer.php')
-        ?>
+        <div class="bg-light text-center">
+            <p>
+                DBMS GLOB
+            </p>
+        </div>
     </div>
     <!-- Bootstrap JS link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
